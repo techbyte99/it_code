@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Bubble Sort</title>
+	<script type="text/javascript">
+		function sort() {
+
+			var n = document.getElementById("size").value;			
+			var str = document.getElementById("elements").value;
+
+			a = str.split(",");
+			b = a.map(Number);
+
+			if(b.length > n) {
+				alert("Elements entered exceeds the given number of elments");
+			}
+
+			for(var i = 0; i < n; i++) {
+				for(var j = 1;j < (n-i); j++) {
+					if(b[j-1] > b[j]) {
+						var t = b[j-1];
+						b[j-1] = b[j];
+						b[j] = t;
+					}
+				}
+			}
+
+			document.getElementById("result").innerHTML = "Result: " + b.toString();			
+		}
+	</script>
+</head>
+<body>
+
+	<h2 style="text-align: center">Bubble Sort</h2>
+
+	<form action = "" method = "">
+		Size:	<input type="number" id="size"><br><br>
+		Elements: <input type="text" id="elements"><br><br>
+		<input type="button" value="Submit" onclick="sort()">
+	</form>
+
+	<p id = "result"></p>
+</body>
+</html>

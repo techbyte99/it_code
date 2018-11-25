@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+
+	<script type="text/javascript">
+		function check() {			
+			var str=[];
+			var j = 0;
+
+			alert(document.getElementById(1.toString()).value);		
+	
+			for(var i = 1; i <= 7; i++) {				
+				if(document.getElementById(i.toString()).value == "") {
+						str[j] = document.getElementById(i.toString()).name;
+						j++;
+					}				
+			}
+
+			if(j != 0)
+				alert(j + " field empty : "+ str.toString());	
+		}
+	</script>
+</head>
+<body>
+
+	<h2 style="text-align:center">Regiseration Form</h2><br>
+	
+	<form name="form1" method="" action="">
+		First Name : <input type="text" id="1" name="First Name"><br>
+		Last Name : <input type="text" id="2" name="Last Name"><br><br>
+
+		Email Address : <input type="text" id="3" name="Email"><br><br>
+
+		Address : <input type="text" id="4" name="Address"><br>
+		Postal Code : <input type="text" id="6" name="Postal Code"><br>
+		Country : <input type="text" id="7" name="Country"><br><br>
+
+		Please choose the most appropriate statement.<br>
+		<input type="radio" id="8" name="selection" value="A">I regularly purchase items online.<br>
+		<input type="radio" id="9" name="selection" value="B">I have an occasion purchased items online.<br>
+		<input type="radio" id="10" name="selection" value="C">I have not purchased anything online, but I would consider it.<br>
+		<input type="radio" id="11" name="selection" value="D">I prefer to shop in real stores.<br><br>
+
+		I'm interested in (select all that apply)<br>
+		<input type="checkbox" id="12" value="A">Hiking<br>
+		<input type="checkbox" id="13" value="B">Mountain biking<br>
+		<input type="checkbox" id="14" value="C">Camping<br>
+		<input type="checkbox" id="15" value="D">Rock climbing<br><br>
+
+		I learned about this site from<br>
+		<select id="16">
+			<option value="a" selected="selected">Print Ad</option>
+			<option value="b">word of mouth</option>
+			<option value="c">other</option>
+		</select><br><br>
+
+		Comment : <textarea id="17"></textarea><br><br>
+		<input type="button" value="Submit" onclick="check()">
+		<input type="reset">
+	</form>
+</body>
+</html>

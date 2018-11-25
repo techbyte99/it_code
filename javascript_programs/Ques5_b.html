@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Moving Image</title>
+
+	<script type="text/javascript">		
+		var left=0;
+		function move(){	
+			if (left<screen.width-150)
+				left+=10;
+			else 
+				left=0;
+
+			document.getElementById("image").style.position="absolute";
+			document.getElementById("image").style.left=left.toString()+"px" ;
+		}
+
+		function abc() {
+			setInterval(move,100);
+		}
+	</script>
+</head>
+	<body>
+
+		<h2 style="text-align:center">Moving Image across Screen</h2>
+
+		<br><br>
+
+		<img src="snake.jpeg" height="150px" width="150px" id="image" name="image">
+		<script type="text/javascript">abc();</script>
+	</body>
+</html>

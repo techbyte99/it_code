@@ -1,0 +1,9 @@
+DELIMITER //
+DROP PROCEDURE IF EXISTS `Students`.`getCount` //
+
+CREATE PROCEDURE `Students`.`getCount` (OUT S_COUNT INT)
+	BEGIN
+	SELECT count(*) INTO S_COUNT FROM Student;
+	END //
+
+DELIMITER ;

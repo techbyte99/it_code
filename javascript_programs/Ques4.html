@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Stack</title>
+		<script type="text/javascript">
+			arr = [];
+
+			function Push(){
+				var elt = document.getElementById("num").value;
+
+				arr.push(elt);
+				document.getElementById("result").value=arr.toString();
+			}
+			
+			function Pop() {
+				arr.pop();
+				document.getElementById("result").value=arr.toString();
+			}
+		</script>
+	</head>
+	<body>
+		
+		<h2 style="text-align:center">Stack in JavaScript</h2>
+
+		<form>
+			Element: <input type="number" id="num"><br><br>
+
+			<input type="button" value="Push" id="s_push" onclick="Push()">
+			<input type="button" value="Pop" id="s_pop" onclick="Pop()">
+
+			<br><br><br>
+			Stack: <textarea id="result"></textarea>
+		</form>
+	</body>
+</html>

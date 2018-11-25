@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Changing Colour</title>
+
+	<script type="text/javascript">
+	
+		function green() {	
+			document.getElementById(1).style.color="green";
+		}
+
+		function red() {
+			document.getElementById(1).style.color="red";
+		}
+
+		function yellow(){
+			document.getElementById(1).style.color="yellow";
+		}
+
+		function cyan(){
+			document.getElementById(1).style.color="cyan";
+		}
+
+		function Blue(){
+			document.getElementById(1).style.color="Blue";
+		}
+
+		function change(){				
+				setTimeout(green,500);
+				setTimeout(red,1000);
+				setTimeout(yellow,1500);
+				setTimeout(cyan,2000);
+				setTimeout(Blue,2500);			
+		}
+	</script>
+</head>
+<body>
+	<h1 style="text-align:center" id=1>Changing the Color of the Text using setTimeout()</h1>
+	<script type="text/javascript">	
+		setInterval(change, 2500);
+	</script>
+</body>
+</html>

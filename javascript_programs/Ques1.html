@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>Student Registration</title>
+	<script type="text/javascript">
+		function checkName(event) {		
+			var a=event.keyCode;		
+			var x=document.getElementById("2").value.length;
+			if(!((a>64 && a<91) || (a==16)))
+				document.getElementById("2").value=document.getElementById("2").value.slice(0,x-1);		
+		}
+
+		function checkRoll(event) {
+			var a=event.keyCode;		
+			var x=document.getElementById("1").value.length;
+			if(x>7) {
+				document.getElementById("1").value=document.getElementById("1").value.slice(0,x-1);
+			}
+		}
+
+		function check() {
+			var r = document.getElementById("1").value;
+			var n = document.getElementById("2").value;
+			var d = document.getElementById("3").value;
+			var dob = new Date(document.getElementById("3").value);
+			var days = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+			var months = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+			var day = dob.getDay();
+			var month = dob.getMonth();
+			var dobstr = days[day] + " " + months[month] + " " + dob.getDate() + ", " + dob.getFullYear();
+
+			if(r != "" && n != "" && d != ""){
+				document.write("Roll no. "+document.getElementById("1").value + "<br>Name : " + document.getElementById("2").value + "<br> Date : " + " " + dobstr);
+			}
+
+			else if(document.getElementById("1").value == ""){			
+				alert("Roll no. field empty");
+				document.getElementById("1").focus();
+			}
+
+			else if(document.getElementById("2").value == ""){
+				alert("Name field empty");
+				document.getElementById("2").focus();
+			}
+
+			else if( d == "" ){
+				alert("Date field empty");
+				document.getElementById("3").focus();
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<h1 style="text-align:center">Student Registration Form</h1>	
+
+	<form>
+		Roll Number: <input type = "number" id="1" onkeyup="checkRoll(event)"><br><br>
+		Name: <input type="text" id="2" onkeyup="checkName(event)"><br><br>
+		DOB: <input type="date" id="3"><br><br>
+		<input type="submit" onclick="check()">
+	</form>
+</body>
+</html>

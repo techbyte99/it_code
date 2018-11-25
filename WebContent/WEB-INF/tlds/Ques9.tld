@@ -1,0 +1,9 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.1</jsp-version>
+    <tag>
+        <name>today</name>
+        <tag-class>com.jsp_programs.TodayTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+</taglib>
